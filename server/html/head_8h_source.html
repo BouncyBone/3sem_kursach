@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Server: Исходный файл head.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">head.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="head_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;cryptopp/cryptlib.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;getopt.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;cryptopp/hex.h&gt;</span> <span class="comment">// HexEncoder</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="head_8h.html#a60054cd46e0dc2ed04249519a5291cda">   28</a></span>&#160;<span class="preprocessor">#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using namespace </span>CryptoPP;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cryptopp/md5.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="head_8h.html#aca36b4f222e88d8334a40aba414f7e39">   35</a></span>&#160;std::string <a class="code" href="head_8h.html#aca36b4f222e88d8334a40aba414f7e39">MD</a>(std::string sah);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="work_8cpp.html#a6ccb283a658fa45df51fc879c9f9f4ad">errors</a>(std::string error, std::string name);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="head_8h.html#a2261239a94510c87c11a323b7aab50f9">msgsend</a>(<span class="keywordtype">int</span> work_sock, <span class="keywordtype">string</span> mess);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">int</span> <a class="code" href="head_8h.html#a2fe5e3dce11e43d39e3ff32f24c61e55">autorized</a>(<span class="keywordtype">int</span> work_sock, <span class="keywordtype">string</span> file_name, <span class="keywordtype">string</span> file_error);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">int</span> <a class="code" href="head_8h.html#a87fd77323b4c3ee742811a2b6b76dfa5">math</a>(<span class="keywordtype">int</span> work_sock);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//Класс сервера</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classServer.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">string</span>* comstr(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> self_addr(<span class="keywordtype">string</span> file_error, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> client_addr(<span class="keywordtype">int</span> s, <span class="keywordtype">string</span> file_error);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classBindingError.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBindingError.html">BindingError</a>: <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classBindingError.html">BindingError</a>(<span class="keyword">const</span> std::string&amp; s) : std::invalid_argument(s) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classBindingError.html">BindingError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * s) : std::invalid_argument(s) {}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classAuthError.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAuthError.html">AuthError</a>: <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classAuthError.html">AuthError</a>(<span class="keyword">const</span> std::string&amp; s) : std::invalid_argument(s) {}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classAuthError.html">AuthError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * s) : std::invalid_argument(s) {}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="ttc" id="aclassAuthError_html"><div class="ttname"><a href="classAuthError.html">AuthError</a></div><div class="ttdef"><b>Definition:</b> head.h:61</div></div>
+<div class="ttc" id="aclassBindingError_html"><div class="ttname"><a href="classBindingError.html">BindingError</a></div><div class="ttdoc">Классы ошибок</div><div class="ttdef"><b>Definition:</b> head.h:54</div></div>
+<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdef"><b>Definition:</b> head.h:41</div></div>
+<div class="ttc" id="ahead_8h_html_a2261239a94510c87c11a323b7aab50f9"><div class="ttname"><a href="head_8h.html#a2261239a94510c87c11a323b7aab50f9">msgsend</a></div><div class="ttdeci">void msgsend(int work_sock, string mess)</div><div class="ttdoc">Функция отправки сообщения клиенту</div><div class="ttdef"><b>Definition:</b> work.cpp:13</div></div>
+<div class="ttc" id="ahead_8h_html_a2fe5e3dce11e43d39e3ff32f24c61e55"><div class="ttname"><a href="head_8h.html#a2fe5e3dce11e43d39e3ff32f24c61e55">autorized</a></div><div class="ttdeci">int autorized(int work_sock, string file_name, string file_error)</div><div class="ttdoc">Функция авторизации пользователя на сервере.</div><div class="ttdef"><b>Definition:</b> work.cpp:131</div></div>
+<div class="ttc" id="ahead_8h_html_a87fd77323b4c3ee742811a2b6b76dfa5"><div class="ttname"><a href="head_8h.html#a87fd77323b4c3ee742811a2b6b76dfa5">math</a></div><div class="ttdeci">int math(int work_sock)</div><div class="ttdoc">Обработка принимаемых векторов</div><div class="ttdef"><b>Definition:</b> work.cpp:190</div></div>
+<div class="ttc" id="ahead_8h_html_aca36b4f222e88d8334a40aba414f7e39"><div class="ttname"><a href="head_8h.html#aca36b4f222e88d8334a40aba414f7e39">MD</a></div><div class="ttdeci">std::string MD(std::string sah)</div><div class="ttdoc">Структура сервера</div></div>
+<div class="ttc" id="awork_8cpp_html_a6ccb283a658fa45df51fc879c9f9f4ad"><div class="ttname"><a href="work_8cpp.html#a6ccb283a658fa45df51fc879c9f9f4ad">errors</a></div><div class="ttdeci">void errors(string error, string name)</div><div class="ttdoc">Обработка ошибок</div><div class="ttdef"><b>Definition:</b> work.cpp:75</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
