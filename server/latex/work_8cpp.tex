@@ -1,0 +1,103 @@
+\hypertarget{work_8cpp}{}\doxysection{Файл work.\+cpp}
+\label{work_8cpp}\index{work.cpp@{work.cpp}}
+
+
+Файл с функциями сервера  
+
+
+{\ttfamily \#include \char`\"{}head.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для work.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{work_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{work_8cpp_a2261239a94510c87c11a323b7aab50f9}{msgsend}} (int work\+\_\+sock, string mess)
+\begin{DoxyCompactList}\small\item\em Функция отправки сообщения клиенту \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{work_8cpp_a5d3cbe8cc65177a40c8a67ccb0a22b1c}{MD}} (string str)
+\begin{DoxyCompactList}\small\item\em Функция создания хэша \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{work_8cpp_a6ccb283a658fa45df51fc879c9f9f4ad}{errors}} (string error, string name)
+\begin{DoxyCompactList}\small\item\em Обработка ошибок \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{work_8cpp_a2fe5e3dce11e43d39e3ff32f24c61e55}{autorized}} (int work\+\_\+sock, string file\+\_\+name, string file\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Функция авторизации пользователя на сервере. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{work_8cpp_a87fd77323b4c3ee742811a2b6b76dfa5}{math}} (int work\+\_\+sock)
+\begin{DoxyCompactList}\small\item\em Обработка принимаемых векторов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Файл с функциями сервера 
+
+\begin{DoxyAuthor}{Автор}
+Фарафонов А.\+Е. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+10.\+10.\+2024 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Авторство}
+ИБСТ ПГУ 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{work_8cpp_a2fe5e3dce11e43d39e3ff32f24c61e55}\label{work_8cpp_a2fe5e3dce11e43d39e3ff32f24c61e55}} 
+\index{work.cpp@{work.cpp}!autorized@{autorized}}
+\index{autorized@{autorized}!work.cpp@{work.cpp}}
+\doxysubsubsection{\texorpdfstring{autorized()}{autorized()}}
+{\footnotesize\ttfamily int autorized (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{string}]{file\+\_\+name,  }\item[{string}]{file\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Функция авторизации пользователя на сервере. 
+
+Поочередно получает логин и пароль клиента, замешивает в пароль соль для шифрования и сравнивает правильность полученных данных. В случае ошибок выбрасывается исключение и ведется запись в лог. \mbox{\Hypertarget{work_8cpp_a6ccb283a658fa45df51fc879c9f9f4ad}\label{work_8cpp_a6ccb283a658fa45df51fc879c9f9f4ad}} 
+\index{work.cpp@{work.cpp}!errors@{errors}}
+\index{errors@{errors}!work.cpp@{work.cpp}}
+\doxysubsubsection{\texorpdfstring{errors()}{errors()}}
+{\footnotesize\ttfamily void errors (\begin{DoxyParamCaption}\item[{string}]{error,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Обработка ошибок 
+
+Открывает файл с логами(параметр -\/e) и записывает туда ошибку в формате\+: Ошибка\+:Время. \mbox{\Hypertarget{work_8cpp_a87fd77323b4c3ee742811a2b6b76dfa5}\label{work_8cpp_a87fd77323b4c3ee742811a2b6b76dfa5}} 
+\index{work.cpp@{work.cpp}!math@{math}}
+\index{math@{math}!work.cpp@{work.cpp}}
+\doxysubsubsection{\texorpdfstring{math()}{math()}}
+{\footnotesize\ttfamily int math (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})}
+
+
+
+Обработка принимаемых векторов 
+
+На вход принимается количество векторов kolvo, длина векторов numb и значения в каждом векторе. \begin{DoxyWarning}{Предупреждения}
+На вход принимаются значения типа uint16\+\_\+t. При переполнении возвращается значение 65535. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{work_8cpp_a5d3cbe8cc65177a40c8a67ccb0a22b1c}\label{work_8cpp_a5d3cbe8cc65177a40c8a67ccb0a22b1c}} 
+\index{work.cpp@{work.cpp}!MD@{MD}}
+\index{MD@{MD}!work.cpp@{work.cpp}}
+\doxysubsubsection{\texorpdfstring{MD()}{MD()}}
+{\footnotesize\ttfamily string MD (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+Функция создания хэша 
+
+Принимает на вход текстовую строку и возвращает строку шестнадцатиричного хэша \mbox{\Hypertarget{work_8cpp_a2261239a94510c87c11a323b7aab50f9}\label{work_8cpp_a2261239a94510c87c11a323b7aab50f9}} 
+\index{work.cpp@{work.cpp}!msgsend@{msgsend}}
+\index{msgsend@{msgsend}!work.cpp@{work.cpp}}
+\doxysubsubsection{\texorpdfstring{msgsend()}{msgsend()}}
+{\footnotesize\ttfamily void msgsend (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{string}]{mess }\end{DoxyParamCaption})}
+
+
+
+Функция отправки сообщения клиенту 
+
+Создаёт буфер для сообщения и отправляет сообщение 

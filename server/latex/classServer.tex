@@ -1,0 +1,53 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+string $\ast$ \mbox{\hyperlink{classServer_a54ca0428e56a33a96a3efd38c614d647}{comstr}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Обработка командной строки \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServer_a729081a1b293943c9a62b8175e6d9e7a}{self\+\_\+addr}} (string file\+\_\+error, int port)
+\begin{DoxyCompactList}\small\item\em Структура сервера \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServer_af03db1924d73bdd5be7fd145753d7d18}{client\+\_\+addr}} (int s, string file\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Структура клиента \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classServer_af03db1924d73bdd5be7fd145753d7d18}\label{classServer_af03db1924d73bdd5be7fd145753d7d18}} 
+\index{Server@{Server}!client\_addr@{client\_addr}}
+\index{client\_addr@{client\_addr}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{client\_addr()}{client\_addr()}}
+{\footnotesize\ttfamily int Server\+::client\+\_\+addr (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{string}]{file\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Структура клиента 
+
+Подключается к серверу по уже созданному в структуре сервера сокету. В случае ошибки делает запись в лог. \mbox{\Hypertarget{classServer_a54ca0428e56a33a96a3efd38c614d647}\label{classServer_a54ca0428e56a33a96a3efd38c614d647}} 
+\index{Server@{Server}!comstr@{comstr}}
+\index{comstr@{comstr}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{comstr()}{comstr()}}
+{\footnotesize\ttfamily string $\ast$ Server\+::comstr (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Обработка командной строки 
+
+Обработка параметров командной строки и вывод справки в случае параметра -\/h \begin{DoxyWarning}{Предупреждения}
+Указание параметров -\/f(файл базы данных) и -\/e(файл с логами) обязательно! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classServer_a729081a1b293943c9a62b8175e6d9e7a}\label{classServer_a729081a1b293943c9a62b8175e6d9e7a}} 
+\index{Server@{Server}!self\_addr@{self\_addr}}
+\index{self\_addr@{self\_addr}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{self\_addr()}{self\_addr()}}
+{\footnotesize\ttfamily int Server\+::self\+\_\+addr (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+error,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Структура сервера 
+
+Для соединения с клиентом используется порт 127.\+0.\+0.\+1. Функция создает сокет и включает режим ожидания клиента 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{head_8h}{head.\+h}}\item 
+\mbox{\hyperlink{work_8cpp}{work.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\begin{theindex}
+
+  \item {AuthError}, \hyperpage{7}
+  \item {autorized}
+    \subitem {head.h}, \hyperpage{13}
+    \subitem {work.cpp}, \hyperpage{16}
+
+  \indexspace
+
+  \item {BindingError}, \hyperpage{8}
+
+  \indexspace
+
+  \item {client\_addr}
+    \subitem {Server}, \hyperpage{9}
+  \item {comstr}
+    \subitem {Server}, \hyperpage{9}
+
+  \indexspace
+
+  \item {errors}
+    \subitem {work.cpp}, \hyperpage{16}
+
+  \indexspace
+
+  \item {head.h}, \hyperpage{11}
+    \subitem {autorized}, \hyperpage{13}
+    \subitem {math}, \hyperpage{13}
+    \subitem {MD}, \hyperpage{13}
+    \subitem {msgsend}, \hyperpage{13}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{15}
+  \item {main.cpp}, \hyperpage{14}
+    \subitem {main}, \hyperpage{15}
+  \item {math}
+    \subitem {head.h}, \hyperpage{13}
+    \subitem {work.cpp}, \hyperpage{16}
+  \item {MD}
+    \subitem {head.h}, \hyperpage{13}
+    \subitem {work.cpp}, \hyperpage{17}
+  \item {msgsend}
+    \subitem {head.h}, \hyperpage{13}
+    \subitem {work.cpp}, \hyperpage{17}
+
+  \indexspace
+
+  \item {self\_addr}
+    \subitem {Server}, \hyperpage{9}
+  \item {Server}, \hyperpage{9}
+    \subitem {client\_addr}, \hyperpage{9}
+    \subitem {comstr}, \hyperpage{9}
+    \subitem {self\_addr}, \hyperpage{9}
+
+  \indexspace
+
+  \item {work.cpp}, \hyperpage{15}
+    \subitem {autorized}, \hyperpage{16}
+    \subitem {errors}, \hyperpage{16}
+    \subitem {math}, \hyperpage{16}
+    \subitem {MD}, \hyperpage{17}
+    \subitem {msgsend}, \hyperpage{17}
+
+\end{theindex}

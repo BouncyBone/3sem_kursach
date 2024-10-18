@@ -1,0 +1,133 @@
+\hypertarget{head_8h}{}\doxysection{Файл head.\+h}
+\label{head_8h}\index{head.h@{head.h}}
+
+
+Заголовочный файл  
+
+
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cryptopp/cryptlib.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/hex.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/md5.\+h$>$}\newline
+Граф включаемых заголовочных файлов для head.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{head_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{head_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classServer}{Server}}
+\item 
+class \mbox{\hyperlink{classBindingError}{Binding\+Error}}
+\begin{DoxyCompactList}\small\item\em Классы ошибок \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classAuthError}{Auth\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{head_8h_a60054cd46e0dc2ed04249519a5291cda}\label{head_8h_a60054cd46e0dc2ed04249519a5291cda}} 
+\#define \mbox{\hyperlink{head_8h_a60054cd46e0dc2ed04249519a5291cda}{CRYPTOPP\+\_\+\+ENABLE\+\_\+\+NAMESPACE\+\_\+\+WEAK}}~1
+\begin{DoxyCompactList}\small\item\em Используемые библиотеки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{head_8h_aca36b4f222e88d8334a40aba414f7e39}{MD}} (std\+::string sah)
+\begin{DoxyCompactList}\small\item\em Структура сервера \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{head_8h_a198154bf74cde3b84f5b9aacce83e01f}\label{head_8h_a198154bf74cde3b84f5b9aacce83e01f}} 
+void {\bfseries errors} (std\+::string error, std\+::string name)
+\item 
+void \mbox{\hyperlink{head_8h_a2261239a94510c87c11a323b7aab50f9}{msgsend}} (int work\+\_\+sock, string mess)
+\begin{DoxyCompactList}\small\item\em Функция отправки сообщения клиенту \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{head_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}{autorized}} (int work\+\_\+sock, string file\+\_\+name, string file\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Функция авторизации пользователя на сервере. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{head_8h_a87fd77323b4c3ee742811a2b6b76dfa5}{math}} (int work\+\_\+sock)
+\begin{DoxyCompactList}\small\item\em Обработка принимаемых векторов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл 
+
+\begin{DoxyAuthor}{Автор}
+Фарафонов А.\+Е. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+10.\+10.\+2024 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Авторство}
+ИБСТ ПГУ 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{head_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}\label{head_8h_a2fe5e3dce11e43d39e3ff32f24c61e55}} 
+\index{head.h@{head.h}!autorized@{autorized}}
+\index{autorized@{autorized}!head.h@{head.h}}
+\doxysubsubsection{\texorpdfstring{autorized()}{autorized()}}
+{\footnotesize\ttfamily int autorized (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{string}]{file\+\_\+name,  }\item[{string}]{file\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Функция авторизации пользователя на сервере. 
+
+Поочередно получает логин и пароль клиента, замешивает в пароль соль для шифрования и сравнивает правильность полученных данных. В случае ошибок выбрасывается исключение и ведется запись в лог. \mbox{\Hypertarget{head_8h_a87fd77323b4c3ee742811a2b6b76dfa5}\label{head_8h_a87fd77323b4c3ee742811a2b6b76dfa5}} 
+\index{head.h@{head.h}!math@{math}}
+\index{math@{math}!head.h@{head.h}}
+\doxysubsubsection{\texorpdfstring{math()}{math()}}
+{\footnotesize\ttfamily int math (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})}
+
+
+
+Обработка принимаемых векторов 
+
+На вход принимается количество векторов kolvo, длина векторов numb и значения в каждом векторе. \begin{DoxyWarning}{Предупреждения}
+На вход принимаются значения типа uint16\+\_\+t. При переполнении возвращается значение 65535. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{head_8h_aca36b4f222e88d8334a40aba414f7e39}\label{head_8h_aca36b4f222e88d8334a40aba414f7e39}} 
+\index{head.h@{head.h}!MD@{MD}}
+\index{MD@{MD}!head.h@{head.h}}
+\doxysubsubsection{\texorpdfstring{MD()}{MD()}}
+{\footnotesize\ttfamily std\+::string MD (\begin{DoxyParamCaption}\item[{std\+::string}]{sah }\end{DoxyParamCaption})}
+
+
+
+Структура сервера 
+
+Структура сервера с обозначением функций программы и требуемых параметров функций. \mbox{\Hypertarget{head_8h_a2261239a94510c87c11a323b7aab50f9}\label{head_8h_a2261239a94510c87c11a323b7aab50f9}} 
+\index{head.h@{head.h}!msgsend@{msgsend}}
+\index{msgsend@{msgsend}!head.h@{head.h}}
+\doxysubsubsection{\texorpdfstring{msgsend()}{msgsend()}}
+{\footnotesize\ttfamily void msgsend (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{string}]{mess }\end{DoxyParamCaption})}
+
+
+
+Функция отправки сообщения клиенту 
+
+Создаёт буфер для сообщения и отправляет сообщение 
