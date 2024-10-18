@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Server: Файл head.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл head.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Заголовочный файл  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cryptopp/cryptlib.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;getopt.h&gt;</code><br />
+<code>#include &lt;cryptopp/hex.h&gt;</code><br />
+<code>#include &lt;cryptopp/md5.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для head.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="head_8h__incl.png" border="0" usemap="#ahead_8h" alt=""/></div>
+<map name="ahead_8h" id="ahead_8h">
+<area shape="rect" title="Заголовочный файл" alt="" coords="825,5,892,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,101,107"/>
+<area shape="rect" title=" " alt="" coords="125,80,205,107"/>
+<area shape="rect" title=" " alt="" coords="229,80,299,107"/>
+<area shape="rect" title=" " alt="" coords="323,80,415,107"/>
+<area shape="rect" title=" " alt="" coords="439,80,505,107"/>
+<area shape="rect" title=" " alt="" coords="529,80,604,107"/>
+<area shape="rect" title=" " alt="" coords="628,80,687,107"/>
+<area shape="rect" title=" " alt="" coords="711,80,798,107"/>
+<area shape="rect" title=" " alt="" coords="822,80,895,107"/>
+<area shape="rect" title=" " alt="" coords="920,80,995,107"/>
+<area shape="rect" title=" " alt="" coords="1019,80,1077,107"/>
+<area shape="rect" title=" " alt="" coords="1101,80,1245,107"/>
+<area shape="rect" title=" " alt="" coords="1270,80,1333,107"/>
+<area shape="rect" title=" " alt="" coords="1357,80,1411,107"/>
+<area shape="rect" title=" " alt="" coords="1435,80,1511,107"/>
+<area shape="rect" title=" " alt="" coords="1535,80,1654,107"/>
+<area shape="rect" title=" " alt="" coords="1678,80,1802,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="head_8h__dep__incl.png" border="0" usemap="#ahead_8hdep" alt=""/></div>
+<map name="ahead_8hdep" id="ahead_8hdep">
+<area shape="rect" title="Заголовочный файл" alt="" coords="67,5,133,32"/>
+<area shape="rect" href="main_8cpp.html" title="Главный файл программы" alt="" coords="5,80,88,107"/>
+<area shape="rect" href="work_8cpp.html" title="Файл с функциями сервера" alt="" coords="113,80,194,107"/>
+</map>
+</div>
+</div>
+<p><a href="head_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html">Server</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBindingError.html">BindingError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Классы ошибок  <a href="classBindingError.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthError.html">AuthError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a60054cd46e0dc2ed04249519a5291cda"><td class="memItemLeft" align="right" valign="top"><a id="a60054cd46e0dc2ed04249519a5291cda"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="head_8h.html#a60054cd46e0dc2ed04249519a5291cda">CRYPTOPP_ENABLE_NAMESPACE_WEAK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a60054cd46e0dc2ed04249519a5291cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Используемые библиотеки <br /></td></tr>
+<tr class="separator:a60054cd46e0dc2ed04249519a5291cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aca36b4f222e88d8334a40aba414f7e39"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="head_8h.html#aca36b4f222e88d8334a40aba414f7e39">MD</a> (std::string sah)</td></tr>
+<tr class="memdesc:aca36b4f222e88d8334a40aba414f7e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура сервера  <a href="head_8h.html#aca36b4f222e88d8334a40aba414f7e39">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca36b4f222e88d8334a40aba414f7e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198154bf74cde3b84f5b9aacce83e01f"><td class="memItemLeft" align="right" valign="top"><a id="a198154bf74cde3b84f5b9aacce83e01f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>errors</b> (std::string error, std::string name)</td></tr>
+<tr class="separator:a198154bf74cde3b84f5b9aacce83e01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2261239a94510c87c11a323b7aab50f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="head_8h.html#a2261239a94510c87c11a323b7aab50f9">msgsend</a> (int work_sock, string mess)</td></tr>
+<tr class="memdesc:a2261239a94510c87c11a323b7aab50f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция отправки сообщения клиенту  <a href="head_8h.html#a2261239a94510c87c11a323b7aab50f9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2261239a94510c87c11a323b7aab50f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe5e3dce11e43d39e3ff32f24c61e55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="head_8h.html#a2fe5e3dce11e43d39e3ff32f24c61e55">autorized</a> (int work_sock, string file_name, string file_error)</td></tr>
+<tr class="memdesc:a2fe5e3dce11e43d39e3ff32f24c61e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция авторизации пользователя на сервере.  <a href="head_8h.html#a2fe5e3dce11e43d39e3ff32f24c61e55">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2fe5e3dce11e43d39e3ff32f24c61e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fd77323b4c3ee742811a2b6b76dfa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="head_8h.html#a87fd77323b4c3ee742811a2b6b76dfa5">math</a> (int work_sock)</td></tr>
+<tr class="memdesc:a87fd77323b4c3ee742811a2b6b76dfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка принимаемых векторов  <a href="head_8h.html#a87fd77323b4c3ee742811a2b6b76dfa5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a87fd77323b4c3ee742811a2b6b76dfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Заголовочный файл </p>
+<dl class="section author"><dt>Автор</dt><dd>Фарафонов А.Е. </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>10.10.2024 </dd></dl>
+<dl class="section copyright"><dt>Авторство</dt><dd>ИБСТ ПГУ </dd></dl>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a2fe5e3dce11e43d39e3ff32f24c61e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe5e3dce11e43d39e3ff32f24c61e55">&#9670;&nbsp;</a></span>autorized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int autorized </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>work_sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция авторизации пользователя на сервере. </p>
+<p>Поочередно получает логин и пароль клиента, замешивает в пароль соль для шифрования и сравнивает правильность полученных данных. В случае ошибок выбрасывается исключение и ведется запись в лог. </p>
+
+</div>
+</div>
+<a id="a87fd77323b4c3ee742811a2b6b76dfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87fd77323b4c3ee742811a2b6b76dfa5">&#9670;&nbsp;</a></span>math()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int math </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>work_sock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обработка принимаемых векторов </p>
+<p>На вход принимается количество векторов kolvo, длина векторов numb и значения в каждом векторе. </p><dl class="section warning"><dt>Предупреждения</dt><dd>На вход принимаются значения типа uint16_t. При переполнении возвращается значение 65535. </dd></dl>
+
+</div>
+</div>
+<a id="aca36b4f222e88d8334a40aba414f7e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca36b4f222e88d8334a40aba414f7e39">&#9670;&nbsp;</a></span>MD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MD </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sah</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Структура сервера </p>
+<p>Структура сервера с обозначением функций программы и требуемых параметров функций. </p>
+
+</div>
+</div>
+<a id="a2261239a94510c87c11a323b7aab50f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2261239a94510c87c11a323b7aab50f9">&#9670;&nbsp;</a></span>msgsend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void msgsend </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>work_sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>mess</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция отправки сообщения клиенту </p>
+<p>Создаёт буфер для сообщения и отправляет сообщение </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
